@@ -14,7 +14,7 @@
   </ion-header>
 
   <ion-content class="ion-padding">
-    <ng-container *ngIf="imagedata;else loading">
+    <ng-container *ngIf="imagedata; else loading">
       <ion-card>
         <img [src]="imagedata.url" alt="NASA image of the day"/>
         <ion-card-header>
@@ -24,7 +24,7 @@
     </ng-container>
     
     <ng-template #loading>
-      <ion-spinner name="dots"></ion-spinner>
+      <ion-spinner name="crescent"></ion-spinner>
     </ng-template>
   </ion-content>
 </ion-content>
