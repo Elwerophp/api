@@ -13,17 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <iom-content class="ion-padding">
-    <ng-container *ngIf="imaedate;esle loading">
+  <ion-content class="ion-padding">
+    <ng-container *ngIf="imagedata;else loading">
       <ion-card>
-        <img [src]="imagedadata.url" alt="NASA image of the day"/>
+        <img [src]="imagedata.url" alt="NASA image of the day"/>
+        <ion-card-header>
           <ion-card-title>{{imagedata.title}}</ion-card-title>
-       </ion-cardion-card-header>
+       </ion-card-header>
       </ion-card>
     </ng-container>
     
-    <ng-tamplete #loading>
+    <ng-template #loading>
       <ion-spinner name="dots"></ion-spinner>
-    </ng-tamplete>
-  </iom-content>
+    </ng-template>
+  </ion-content>
 </ion-content>
