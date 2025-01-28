@@ -13,8 +13,17 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <iom-content class="ion-padding">
+    <ng-container *ngIf="imaedate;esle loading">
+      <ion-card>
+        <img [src]="imagedadata.url" alt="NASA image of the day"/>
+          <ion-card-title>{{imagedata.title}}</ion-card-title>
+       </ion-cardion-card-header>
+      </ion-card>
+    </ng-container>
+    
+    <ng-tamplete #loading>
+      <ion-spinner name="dots"></ion-spinner>
+    </ng-tamplete>
+  </iom-content>
 </ion-content>

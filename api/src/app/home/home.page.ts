@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NasaService } from '../nasa.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,11 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
-
-  constructor() {}
-
+  imagedata:any;
+  constructor(private nasaservice: NasaService) {}
+  ngOnInit(){
+    this.nasaservice.getimageoftheday().subscribe((data)=>{
+      this.imagedata = data;
+    });
+  }
 }
